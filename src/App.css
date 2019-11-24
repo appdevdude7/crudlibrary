@@ -10,6 +10,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
 }
 /*new css change */
 body {
@@ -27,7 +28,7 @@ h1 {
 .App {
   margin: 0 auto;
   max-width: 1280px;
-  width: 90%;
+  width: 100%;
   background: var(--mainWhite);
   padding-bottom: 2rem;
   border-radius: 2px;
@@ -36,11 +37,26 @@ h1 {
   display: flex;
   padding: 0 1rem;
 }
+/* Card */
 .card{
   display: flex;
-  background-color: cadetblue;
   padding: 1rem;
 }
+.card-item{
+  display: flex;
+  flex-direction: column;
+  min-height: 10rem;
+  min-width: 15rem;
+  justify-content: center;
+  text-align: left;
+  align-content: center;
+  background-color: white;
+}
+.card-item:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(1.05);
+}
+/* Card end*/
 .form-group {
   padding: 1rem 0.75rem;
   flex: 0 0 30%;
@@ -96,13 +112,19 @@ label {
   margin-left: 0.75rem;
   font-size: 1.2rem;
 }
-.list {
+.list{
+  display: flex;
+  border: none;
+  padding: 0;
+  /* background-color: red; */
+}
+/* .list {
   margin: 2rem 0.75rem 0 0.75rem;
   list-style-type: none;
   border: none;
   padding: 0;
 }
-.item {
+ */.item {
   background-color: var(--mainWhite);
   line-height: 1.5rem;
   padding: 10px 20px;
@@ -122,8 +144,8 @@ label {
   justify-content: space-between;
 }
 .expense {
-  margin-right: 2rem;
   text-transform: capitalize;
+  padding: 0.5rem;
 }
 .amount {
   font-weight: 300;
@@ -185,7 +207,7 @@ label {
   .App,
   .list,
   .alert {
-    width: 80%;
+    width: 90%;
   }
   .list {
     margin: 2rem auto 0 auto;

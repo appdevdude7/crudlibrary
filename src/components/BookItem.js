@@ -7,7 +7,18 @@ const BookItem = ({expense, handleEdit, handleDelete}) => {
     return (
         <>
             <div className="card">
-                <li className="item" >
+                <li className="card-item">
+                        <span className="expense"><b>Book Name :</b> {charge}</span>
+                        <span className="expense"><b>Author :</b> {author}</span>
+                        <span className="expense"><b>Price :</b> $ { amount}</span>
+                        <button className="edit-btn" aria-label="edit button" onClick={()=>handleEdit(id)} >
+                            <MdEdit />
+                        </button>
+                        <button className="clear-btn" aria-label="delete button" onClick={()=>handleDelete(id)}>
+                            <MdDelete />
+                        </button>
+                </li>
+                {/* <li className="item" >
                     <div className="info" >
                         <span className="expense">{charge}</span>
                         <span className="expense">{author}</span>
@@ -21,7 +32,7 @@ const BookItem = ({expense, handleEdit, handleDelete}) => {
                             <MdDelete />
                         </button>
                     </div>
-                </li>
+                </li> */}
             </div>
         </>
     )

@@ -40,7 +40,7 @@ const BookForm = ({
                 </div>
             </div>
             <button type="submit" className="btn">
-                {edit? 'edit' : 'submit'}
+                {edit? 'edit' : 'Add Book'}
                 <MdSend className="btn-icon" />
             </button>
         </form>

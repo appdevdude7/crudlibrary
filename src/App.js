@@ -48,19 +48,19 @@ function App() {
   }
   const handleSubmit = e => {
     e.preventDefault();
-    if(charge !== "" && amount > 0 ) {
+    if(charge !== "" && author !== "" && amount > 0 ) {
       if(edit) {
         let tempExpenses = expenses.map(item => {
           return item.id === id ? {...item, charge,author, amount} :item
         });
         setExpenses(tempExpenses);
         setEdit(false);
-        handleAlert({type:'success', text: 'item Edited'});
+        handleAlert({type:'success', text: 'Book Edited'});
       }
       else{
         const singleExpense = {id: uuid(), charge, author, amount};
         setExpenses([...expenses, singleExpense]);
-        handleAlert({type:'success', text: 'item added'});
+        handleAlert({type:'success', text: 'Book successfully added'});
       }
       setCharge('');
       setAuthor('');
@@ -68,7 +68,7 @@ function App() {
     }
     else {
       // handle alert called
-      handleAlert({type: 'danger', text: `charge can't be empty and amount has to be bigger than zero`});
+      handleAlert({type: 'danger', text: `Book Name, Author Name can't be empty and Price has to be greater than zero`});
     }
   };
   // clear all items
@@ -81,7 +81,7 @@ function App() {
   const handleDelete = (id) => {
     let tempExpenses = expenses.filter(item => item.id !== id );
     setExpenses(tempExpenses);
-    handleAlert({type: "danger", text: "item deleted"});
+    handleAlert({type: "danger", text: "Book deleted"});
   };
   // handle edit
   const handleEdit = (id) => {
@@ -119,7 +119,7 @@ function App() {
           clearItems={clearItems} 
           handleEdit={handleEdit}  />
       <h1>
-        Total Spending : <span className="total">
+        Total Amount for Books : <span className="total">
           ${expenses.reduce((acc, curr) => {
             return (acc+= parseInt(curr.amount));
           },0 )}
