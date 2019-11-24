@@ -21,7 +21,8 @@ body {
 h1 {
   text-align: center;
   text-transform: capitalize;
-  margin: 2rem 0;
+  margin-bottom: 0.5rem;
+  padding-top: -10px;
   color: var(--mainWhite);
   letter-spacing: 5px;
 }
@@ -38,6 +39,12 @@ h1 {
   padding: 0 1rem;
 }
 /* Card */
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  padding: 0;
+}
 .card{
   display: flex;
   padding: 1rem;
@@ -46,7 +53,7 @@ h1 {
   display: flex;
   flex-direction: column;
   min-height: 10rem;
-  min-width: 15rem;
+  width: 16rem;
   justify-content: center;
   text-align: left;
   align-content: center;
@@ -111,12 +118,6 @@ label {
 .btn-icon {
   margin-left: 0.75rem;
   font-size: 1.2rem;
-}
-.list{
-  display: flex;
-  border: none;
-  padding: 0;
-  /* background-color: red; */
 }
 /* .list {
   margin: 2rem 0.75rem 0 0.75rem;
