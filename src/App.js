@@ -102,7 +102,7 @@ function App() {
     <>
       {alert.show && <Alert type={alert.type} text={alert.text} />}
       <Alert />
-      <h1>Book Library</h1>
+      <h1 className="title">Book Library</h1>
       <main className="App">
         <BookForm 
           charge={charge} 
